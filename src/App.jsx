@@ -576,7 +576,7 @@ export default function App() {
       <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-16 max-w-6xl mx-auto">
 
         {/* TITLE */}
-        <h2 className="text-center text-2xl sm:text-3xl font-extrabold text-gray-800 mb-8 sm:mb-10">
+        <h2 className="section-title text-center text-2xl sm:text-3xl font-extrabold text-gray-800 mb-8 sm:mb-10">
           Fast Food Menus
         </h2>
 
