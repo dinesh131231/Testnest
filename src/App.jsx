@@ -616,7 +616,7 @@ export default function App() {
 
               <button className="bg-red-600 -translate-y-3 text-white font-extrabold text-nowrap w-32 md:h-16 md:px-6 mt-10 md:w-64 -translate-x-2 rounded-3xl text-sm sm:text-base">
                 +1 (234) 567 890
-                <h4 className='font-mono font-semibold text-[10px]'>Avenue newtown 124 united state</h4>
+                <h4 className='font-mono font-semibold text-[6px] md:text-[10px]'>Avenue newtown 124 united state</h4>
               </button>
 
             </div>
