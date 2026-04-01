@@ -2,7 +2,7 @@ import React from 'react'
 
 function Detail() {
   return (
-    <div className="w-[50%] object-contain sm:flex sm:gap-14 p-0 sm:px-6">
+    <div className="w-[50%] object-contain sm:flex  lg:gap-14 p-0 sm:px-8">
 
       {/* SLIDE 1 */}
       <div
@@ -11,7 +11,7 @@ function Detail() {
 
           borderRadius: 12
         }}
-        className="sm:px-[40px]"
+        className="md:px-[40px]"
       >
 
         <p
@@ -58,7 +58,7 @@ function Detail() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-7">
 
           {/* BUTTON */}
-          <div className="border-[3px] border-[#e8193c] w-[90%] sm:w-[50%] rounded-xl pt-1 pb-1">
+          <div className="border-[3px] border-[#e8193c] w-[90%] sm:w-[50%] md:my-5 rounded-xl pt-1 pb-1">
             <button
               className="w-[10rem] sm:w-[13.3rem] -translate-x-4"
               style={{

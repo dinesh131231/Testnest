@@ -37,8 +37,8 @@ function Experiences() {
         absolute 
         left-[55%] sm:left-[60%] md:left-[65%]
         top-1/2 -translate-y-1/2
-        w-[140px] sm:w-[200px] md:w-[260px]
-        h-[200px] sm:h-[280px] md:h-[360px]
+        w-[140px] sm:w-[160px] lg:w-[260px] 
+        h-[200px] sm:h-[260px] lg:h-[360px]
         object-cover rounded-3xl shadow-2xl z-20
       "
                 />
@@ -74,8 +74,8 @@ function Experiences() {
         absolute 
         left-[55%] sm:left-[60%] md:left-[65%]
         top-1/2 -translate-y-1/2
-        w-[140px] sm:w-[200px] md:w-[260px]
-        h-[200px] sm:h-[280px] md:h-[360px]
+        w-[140px] sm:w-[160px] lg:w-[260px]
+        h-[200px] sm:h-[260px] lg:h-[360px]
         object-cover rounded-3xl shadow-2xl z-20
       "
                 />

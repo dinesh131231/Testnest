@@ -6,7 +6,7 @@ import footerbg from '../assets/footerbg.png'
 const Footer = () => {
   return (
     <>
-      <footer className="relative bg-[#f5f5f5] pt-24 pb-12 overflow-hidden">
+      <footer className="relative bg-[#f5f5f5]  pt-24 pb-12 overflow-hidden">
         {/* BACKGROUND DECORATION */}
         <img
           src={footerbg}
@@ -14,7 +14,7 @@ const Footer = () => {
           className="absolute bottom-0 left-0 w-full opacity-80 pointer-events-none select-none z-0"
         />
         {/* CONTENT ABOVE BACKGROUND */}
-        <div className="relative z-10 max-w-[70rem] mx-20 md:px-[15%]">
+        <div className="relative z-10 max-w-[70rem] mx-20 md:px-4 lg:px-[15%]">
 
           {/* TOP SECTION */}
           <div className="grid md:grid-cols-4 md:gap-8 gap-6 justify-items-center md:justify-items-center">
@@ -91,8 +91,8 @@ const Footer = () => {
                 placeholder="Email Address"
                 className="w-full md:w-52 bg-white border border-gray-200 rounded px-4 py-2 text-sm mb-3 outline-none"
               />
-              <div className="border-[2px] translate-x-14 lg:translate-x-2 border-red-500 rounded-lg w-[50%] md:w-[85%] pt-[2px] pb-[2px] ">
-                <button className="bg-red-500 text-white px-5 py-2 rounded-lg text-sm font-bold hover:opacity-90 w-[100%] md:w-auto -translate-x-[6px]">
+              <div className="border-[2px] translate-x-14 md:translate-x-3 lg:translate-x-2 border-red-500 rounded-lg w-[50%] md:w-[80%] lg:w-[85%] pt-[2px] pb-[2px] ">
+                <button className="bg-red-500 text-white px-5 py-2 rounded-lg text-sm font-bold hover:opacity-90 w-[100%] lg:w-auto -translate-x-[6px]">
                   Subscribe
                 </button>
               </div>
@@ -101,7 +101,7 @@ const Footer = () => {
 
           {/* ✅ VISIBLE DIVIDER */}
           <div className="relative md:flex justify-center z-10 mt-16 mb-10">
-            <div className="h-[4px] w-full sm:w-[70rem] bg-[#FFC224] rounded"></div>
+            <div className="h-[4px] w-full md:w-[35rem] lg:w-[70rem] bg-[#FFC224] rounded"></div>
           </div>
 
           {/* BOTTOM BAR */}

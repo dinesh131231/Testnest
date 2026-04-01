@@ -94,33 +94,33 @@ function StarRating({ n = 5 }) {
 function MenuCard({ item }) {
   return (
     <div className="min-h-32 sm:min-h-40 bg-white rounded-2xl shadow-md 
-p-4 sm:p-6 md:p-4 flex flex-row sm:flex-row items-center gap-3 md:gap-9
+p-4 sm:p-6 md:p-4 flex flex-row sm:flex-row items-center gap-3 md:gap-9 
 hover:shadow-xl transition-shadow duration-300 relative group">
 
   {/* Image Container */}
-  <div className="bg-red-600 w-6 h-12 sm:w-14 sm:h-14 md:w-14 md:h-36 
+  <div className="bg-red-600 w-6 h-12 md:w-6 md:h-16 lg:w-14 lg:h-36 
   rounded-t-full rounded-b-full  flex items-center justify-center overflow-visible">
     
     <img 
       src={item.img} 
       alt={item.name} 
-      className="z-10 scale-[200%] sm:scale-150 md:scale-[250%] transition-transform duration-300" 
+      className="z-10 scale-[200%] md:scale-[250%] lg:scale-[250%] transition-transform duration-300" 
     />
   </div>
 
   {/* Content */}
   <div className="flex flex-col justify-center flex-1">
-    <p className="font-bold text-gray-800 text-xs sm:text-sm leading-tight">
+    <p className="font-bold text-gray-800 text-xs lg:text-sm leading-tight">
       {item.name}
     </p>
-    <span className="text-red-500 font-extrabold text-sm sm:text-base">
+    <span className="text-red-500 font-extrabold text-sm lg:text-base">
       {item.price}
     </span>
   </div>
 
   {/* Button */}
-  <button className="h-7 w-7 sm:w-8 sm:h-8 rounded-lg bg-yellow-400 text-white 
-  flex items-center justify-center text-sm sm:text-base font-bold relative top-12 md:top-16
+  <button className="h-7 w-7 lg:w-8 lg:h-8 rounded-lg bg-yellow-400 text-white 
+  flex items-center justify-center text-sm lg:text-base font-bold relative top-12 md:top-16
   hover:bg-red-600 transition">
     🔒
   </button>
@@ -168,7 +168,7 @@ export default function App() {
 
 
   const getTranslate = () => {
-    if (window.innerWidth < 768) return 110;
+    if (window.innerWidth < 768) return 107;
     return 100;
   };
 
@@ -181,7 +181,7 @@ export default function App() {
       <nav className="max-w-7xl z-50 overflow-y-visible rounded-xl shadow-2xl py-3 ">
 
         {/* Top Bar */}
-        <div className="flex items-center px-12 md:mx-20 justify-between">
+        <div className="flex items-center px-12 lg:mx-20 justify-between">
 
           {/* Logo */}
           <img src={TesteNest} alt="logo" className="w-20 h-auto" />
@@ -237,7 +237,7 @@ export default function App() {
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-4">
             <img src={Container} alt="" className="w-5 h-5" />
-            <button className="bg-yellow-300 rounded-md font-bold text-white px-6 py-2 md:py-1">
+            <button className="bg-yellow-300 rounded-md font-bold text-white px-6 md:w-40 py-2 lg:py-1">
               Contact Us
             </button>
 
@@ -323,13 +323,13 @@ export default function App() {
           {slides.map((_, index) => (
             <div key={index} className="w-full flex-shrink-0">
 
-              <div className="bg-[url('./assets/bgimg2.png')] sm:pt-12 flex items-center sm:justify-center pl-5 sm:pl-0 bg-cover bg-center min-h-screen ">
+              <div className="bg-[url('./assets/bgimg2.png')] lg:pt-12 flex items-center lg:justify-center pl-5 sm:pl-0 bg-cover bg-center min-h-screen ">
                 {/* SECTION */}
                 {/* <img src={bgimg2} alt=" bg image" className='absolute bottom-0 left-0 w-full opacity-80 pointer-events-none select-none z-0' /> */}
-                <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:justify-around w-full px-4 py-10 gap-9 ">
+                <div className="max-w-7xl flex md:gap-4 flex-col md:flex-row items-center lg:justify-around w-full px-4 py-10 gap-9 ">
 
                   {/* LEFT */}
-                  <div className='text-nowrap  '>
+                  <div className='text-nowrap md:relative right-[5%] lg:right-2 '>
                     <Detail />
                   </div>
 
@@ -347,7 +347,7 @@ export default function App() {
                     <img
                       src={burger}
                       alt="burger"
-                      className="w-[240px] sm:w-[350px] md:scale-[120%] md:w-[450px] lg:w-[550px]"
+                      className="w-[240px] md:scale-[140%] lg:scale-[120%] md:relative md:right-7 lg:w-[550px]"
                     />
 
                   </div>
@@ -424,7 +424,7 @@ export default function App() {
 
       {/* ══════════════════════ CATEGORIES ══════════════════════ */}
 
-      <section className="py-12 sm:py-14 px-4 sm:px-6 md:px-16 overflow-hidden">
+      <section className="py-12 sm:py-14 px-4 sm:px-6 lg:px-16 overflow-hidden">
 
         <h2 className="section-title text-center text-2xl sm:text-3xl font-extrabold text-gray-800 mb-8 sm:mb-10">
           Choose a Category
@@ -439,7 +439,7 @@ export default function App() {
         >
 
           {chunkedCategories.map((group, index) => (
-            <div key={index} className="w-full sm:w-full flex-shrink-0 flex justify-between sm:justify-center mx-3 sm:mx-0 sm:gap-8 md:gap-10">
+            <div key={index} className="w-full sm:w-full flex-shrink-0 flex justify-between sm:justify-center  gap-3 md:px-0 mx-2  sm:mx-0  md:gap-10">
 
               {group.map(({ detail, name, img }) => (
                 <div
@@ -503,9 +503,9 @@ export default function App() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="w-full py-10 px-4 sm:px-6 md:px-12"
+        className="w-full py-10 px-4  lg:px-12"
       >
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 sm:gap-10 items-center text-center md:text-left">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-10 items-center text-center lg:text-left">
 
           {/* LEFT CONTENT */}
           <div className="flex flex-col pl-8 sm:items-center md:items-start">
@@ -516,9 +516,9 @@ export default function App() {
   mt-4 md:mt-0
   text-white font-extrabold text-sm sm:text-base
 
-  text-left md:text-center right-10
-  relative md:-right-[100%]
-  h-9 flex items-end sm:items-start
+  text-left lg:text-center right-10
+  relative lg:-right-[100%] md:-right-[80%] md:items-start
+  h-9 flex items-end lg:items-start
   ">
               Watch and follow
             </p>
@@ -551,17 +551,17 @@ export default function App() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center ">
+          <div className="flex justify-end md:flex md:justify-center ">
 
-            <div className='relative top-0 sm:top-11'>
-              <img src={ctr} alt="no image" />
+            <div className='relative top-0 md:top-24 md:right-10 lg:right-0 lg:top-11'>
+              <img src={ctr} alt="no image " className='md:scale-[300%] lg:scale-[100%] ' />
             </div>
             <img
               src={s3img}
               alt="chef"
               className="
           
-          h-[260px] sm:h-[300px] md:h-[340px]
+          h-[260px] md:h-[340px]
           object-cover shadow-2xl
           rounded-full
         "
@@ -573,7 +573,7 @@ export default function App() {
       </section>
 
       {/* ══════════════════════ FAST FOOD MENUS ══════════════════════ */}
-      <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 md:px-16 max-w-6xl mx-auto">
+      <section className="py-12 md:py-16 px-4 sm:px-6 md:px-16 max-w-6xl mx-auto lg:mx-5">
 
         {/* TITLE */}
         <h2 className="section-title text-center text-2xl sm:text-3xl font-extrabold text-gray-800 mb-8 sm:mb-10">
@@ -599,7 +599,7 @@ export default function App() {
 
           {/* OPENING TIMES */}
           <div className=" h-40 flex relative md:left-0 left-[50%] justify-center px-2">
-            <div className="opening-badge w-full max-w-[280px] sm:max-w-xs">
+            <div className="opening-badge w-[32] lg:w-72 max-w-[280px] sm:max-w-xs">
 
               <p className="font-extrabold text-gray-800 uppercase tracking-widest text-[10px] sm:text-xs mb-2 text-center">
                 Opening Times
@@ -614,9 +614,9 @@ export default function App() {
                 ))}
               </div>
 
-              <button className="bg-red-600 -translate-y-3 text-white font-extrabold text-nowrap w-32 md:h-16 md:px-6 mt-10 md:w-64 -translate-x-2 rounded-3xl text-sm sm:text-base">
+              <button className="bg-red-600 translate-y-2 md:flex-col md:-translate-y-2 text-white font-extrabold text-nowrap w-44 lg:h-16 lg:px-6 mt-10 lg:w-[17rem] md:w-48 lg:-translate-x-3 rounded-3xl md:px-8 text-sm sm:text-base">
                 +1 (234) 567 890
-                <h4 className='font-mono font-semibold text-[6px] md:text-[10px]'>Avenue newtown 124 united state</h4>
+                <h4 className='font-mono font-semibold text-[6px] md:text-[8px]'>Avenue newtown 124 united state</h4>
               </button>
 
             </div>
@@ -625,7 +625,7 @@ export default function App() {
       </section>
 
       {/* ══════════════════════ SERVICES ══════════════════════ */}
-      < section className="py-5 px-8 md:px-36  " >
+      < section className="py-5 px-8 md:px-16 lg:px-36  " >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="red-tag">FOOD SERVICES</p>
@@ -711,11 +711,11 @@ export default function App() {
       <div className="min-h-full px-4  sm:px-6 md:px-16 py-3 text-white">
 
         {/* Heading */}
-        <h2 className="text-red-500 sm:translate-x-[11%] font-bold tracking-widest mb-3 text-sm sm:text-base text-center md:text-left">
+        <h2 className="text-red-500 lg:translate-x-[11%] font-bold tracking-widest mb-3 text-sm sm:text-base text-center md:text-left">
           WEEKLY SPECIAL
         </h2>
 
-        <h2 className="font-extrabold sm:translate-x-[11%] text-2xl sm:text-3xl md:text-4xl text-black tracking-widest mb-10 text-center md:text-left">
+        <h2 className="font-extrabold lg:translate-x-[11%] text-2xl sm:text-3xl md:text-4xl text-black tracking-widest mb-10 text-center md:text-left">
           Best Seller Deals
         </h2>
 
@@ -778,7 +778,7 @@ export default function App() {
 
             {/* Button */}
             <div className=" border-[2px] relative bottom-5 left-[30%] sm:left-0 sm:bottom-0 border-red-500 w-[35%] sm:w-[65%] rounded-lg pt-[2px] pb-[2px] justify-start md:justify-start">
-              <button className="bg-red-500 -translate-x-3 px-8  sm:py-2 sm:px-6  rounded-lg text-white font-semibold shadow-lg border-2 border-red-600 hover:scale-105 transition">
+              <button className="bg-red-500 -translate-x-3 px-8  sm:py-2 lg:px-6  rounded-lg text-white font-semibold shadow-lg border-2 border-red-600 hover:scale-105 transition">
                 Product
               </button>
             </div>
