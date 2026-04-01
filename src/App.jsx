@@ -37,7 +37,7 @@ import svg1 from './assets/svg1.png'
 import svg2 from './assets/svg2.png'
 import { useState, useEffect } from "react";
 import dcnt from './assets/dcnt.png'
-
+import bgimg2 from './assets/bgimg2.png'
 
 const FOOD = [food1, food2, food3, food4];
 
@@ -323,8 +323,9 @@ export default function App() {
           {slides.map((_, index) => (
             <div key={index} className="w-full flex-shrink-0">
 
-              <div className=" bg-[url('./bgimg.png')] sm:pt-12 flex items-center sm:justify-center pl-5 sm:pl-0 bg-cover bg-center min-h-screen ">
+              <div className="bg-[url('./assets/bgimg2.png')] sm:pt-12 flex items-center sm:justify-center pl-5 sm:pl-0 bg-cover bg-center min-h-screen ">
                 {/* SECTION */}
+                {/* <img src={bgimg2} alt=" bg image" className='absolute bottom-0 left-0 w-full opacity-80 pointer-events-none select-none z-0' /> */}
                 <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:justify-around w-full px-4 py-10 gap-9 ">
 
                   {/* LEFT */}
