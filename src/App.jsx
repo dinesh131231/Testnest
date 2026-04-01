@@ -413,8 +413,8 @@ export default function App() {
                 <div className='border-yellow-300 border-[2px]' style={{ borderRadius: "50%", width: 48, height: 48, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>{<img src={img} alt={title} className='w-6' />
                 }</div>
                 <div>
-                  <h4 className="font-extrabold text-gray-800">{title}</h4>
-                  <p className="text-gray-500 text-sm">{desc}</p>
+                  <h4 className="font-extrabold text-start text-gray-800">{title}</h4>
+                  <p className="text-gray-500 text-start text-sm">{desc}</p>
                 </div>
               </div>
             ))}
