@@ -1,0 +1,83 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap');
+        :root {
+          --red: #e8193c;
+          --yellow: #f5c518;
+          --dark: #1a1a1a;
+        }
+        .bangers { font-family: 'Bangers', cursive; letter-spacing: 2px; }
+        @keyframes floatY {
+          0%,100% { transform: translateY(0); }
+          50% { transform: translateY(-12px); }
+        }
+        @keyframes fadeUp {
+          from { opacity:0; transform:translateY(24px); }
+          to   { opacity:1; transform:translateY(0); }
+        }
+        .float-anim { animation: floatY 4s ease-in-out infinite; }
+        .fade-up { animation: fadeUp 0.7s ease both; }
+        .section-title::after {
+          content:'';
+          display:block;
+          width:60px;
+          height:4px;
+          background: var(--yellow);
+          margin: 8px auto 0;
+          border-radius:2px;
+        }
+        .red-tag {
+          display:inline-block;
+          color: var(--red);
+          font-size: 0.75rem;
+          font-weight:800;
+          letter-spacing:3px;
+          text-transform:uppercase;
+          margin-bottom:6px;
+        }
+        .btn-red {
+          background: var(--red);
+          color: white;
+          padding: 10px 26px;
+          border-radius: 10px;
+          font-weight:800;
+          font-size:0.95rem;
+          cursor:pointer;
+          border:none;
+          transition: all 0.2s;
+        }
+        .btn-red:hover { background:#c7152f; transform:scale(1.04); }
+        .btn-yellow {
+          background: var(--yellow);
+          color: #111;
+          padding: 10px 26px;
+          border-radius: 10px;
+          font-weight:800;
+          font-size:0.95rem;
+          cursor:pointer;
+          border:none;
+          transition: all 0.2s;
+        }
+        .btn-yellow:hover { background:#d4a900; transform:scale(1.04); }
+        .how-step { position:relative; }
+        .how-step::before {
+          content:'';
+          position:absolute;
+          top:24px;
+          left:calc(50% + 36px);
+          width:calc(100% - 72px);
+          height:2px;
+          background: rgba(255,255,255,0.3);
+          border-top: 2px dashed rgba(255,255,255,0.5);
+        }
+        .how-step:last-child::before { display:none; }
+        .opening-badge {
+          background: var(--yellow);
+          border-radius:14px;
+          padding: 20px;
+          text-align:center;
+        }
+        .insta-img:hover .insta-overlay { opacity:1; }
+        .insta-overlay { opacity:0; transition:opacity 0.3s; }
+        .deal-item { cursor:pointer; padding:10px 14px; border-radius:8px; transition:all 0.2s; }
+        .deal-item.active { background: var(--yellow); }
+      
